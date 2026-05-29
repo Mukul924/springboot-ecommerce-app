@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta charset="UTF-8">
+
+<title>Checkout</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+body{
+background:#f1f3f6;
+}
+
+.checkout-box{
+background:white;
+padding:40px;
+border-radius:15px;
+margin-top:40px;
+}
+
+label{
+margin-bottom:5px !important;
+display:block;
+}
+
+textarea.form-control{
+margin-top:0 !important;
+padding:10px;
+height:60px;
+resize:none;
+}
+.payment-box{
+background:white;
+padding:20px;
+border-radius:12px;
+border:1px solid #dcdcdc;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+text-align:left;
+margin-top:20px;
+}
+
+.form-check{
+margin-bottom:15px;
+font-size:16px;
+}
+
+.form-check-input{
+width:22px;
+height:22px;
+margin-top:6px;
+border:2px solid #198754;
+cursor:pointer;
+}
+
+.form-check-label{
+margin-left:10px;
+cursor:pointer;
+}
+
+.form-label{
+display:block;
+margin-bottom:10px;
+font-weight:500;
+}
+button{
+margin-top:20px;
+}
+
+</style>
+
+</head>
+<body>
+	
+	<div th:replace="fragments/navbar :: navbar"></div>
+
+<div class="container">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+
+            <div class="checkout-box shadow">
+
+                <h2 class="mb-4">
+                    Checkout
+                </h2>
+		
+				<div th:each="item : ${cartItems}"
+				     class="card p-3 mb-3">
+					 
+					 <div class="text-center">
+
+					     <!-- image + product name -->
+						 
+						  <img th:src="@{'/images/' + ${item.product.imageUrl}}"
+						       class="img-fluid rounded mb-3"
+						       style="
+						       height:180px;
+						       width:100%;
+						       object-fit:contain;
+						       border-radius:10px;
+						       background:#f8f9fa;
+						       padding:10px;">
+						 	  <hr>
+
+						 <h4 th:text="${item.product.name}">
+						 </h4>
+
+					 </div>
+
+				    <p>
+				        Quantity:
+				        <span th:text="${item.quantity}">
+				        </span>
+				    </p>
+					
+					<p>
+					    Price:
+					    ₹
+					    <span th:text="${item.product.price}">
+					    </span>
+					</p>
+
+				    <p class="fw-bold">
+
+				        Total:
+				        ₹
+
+				        <span th:text=
+				"${item.product.price * item.quantity}">
+				        </span>
+				    </p>
+
+				</div>
+				
+				<form action="/processPayment"
+				      method="post">
+
+					  <div class="form-section">
+
+					      <!-- address -->
+						  
+						  <label>
+						      Delivery Address
+						  </label>
+
+						  <input type="text"
+						         name="address"
+						         class="form-control"
+						         placeholder="Enter Address">
+
+					  </div>
+					  
+					  
+					  <div class="payment-box">
+
+					      <!-- payment methods -->
+					  
+						  <h5 class="mb-4">
+						      Payment Method
+						  </h5>
+
+					    <div class="form-check">
+
+					        <input class="form-check-input"
+					               type="radio"
+					               name="paymentMethod"
+					               value="COD"
+					               checked>
+
+					        <label class="form-check-label">
+
+					            Cash On Delivery
+
+					        </label>
+
+					    </div>
+
+					    <div class="form-check">
+
+					        <input class="form-check-input"
+					               type="radio"
+					               name="paymentMethod"
+					               value="UPI">
+
+					        <label class="form-check-label">
+
+					            UPI
+
+					        </label>
+
+					    </div>
+
+					    <div class="form-check">
+
+					        <input class="form-check-input"
+					               type="radio"
+					               name="paymentMethod"
+					               value="CARD">
+
+					        <label class="form-check-label">
+
+					            Debit/Credit Card
+
+					        </label>
+
+					    </div>
+
+					</div>
+                    <button class="btn btn-success w-100">
+
+						Proceed To Payment
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
