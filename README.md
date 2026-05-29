@@ -49,7 +49,7 @@ A full-stack Ecommerce Web Application built using Spring Boot, Spring Security,
 | Maven | ✅ |
 | Git & GitHub | ✅ |
 
----
+
 
 ## 🏗 Architecture
 
@@ -65,7 +65,7 @@ Repository Layer
 MySQL Database
 ```
 
----
+
 
 ## 📂 Project Structure
 
@@ -86,7 +86,7 @@ src/main/java
 └── config
 ```
 
----
+
 
 ## 📂 Project Modules
 
