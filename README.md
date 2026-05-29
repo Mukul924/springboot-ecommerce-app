@@ -67,6 +67,25 @@ MySQL Database
 
 ---
 
+## 📂 Project Structure
+
+```text
+src/main/java
+│
+├── controller
+│   ├── UserController
+│   ├── ProductController
+│   ├── CartController
+│   ├── OrderController
+│   └── PaymentController
+│
+├── service
+├── repository
+├── entity
+├── security
+└── config
+```
+
 ## 📂 Project Modules
 
 ### User Module
