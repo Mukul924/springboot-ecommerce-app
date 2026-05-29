@@ -86,6 +86,8 @@ src/main/java
 └── config
 ```
 
+---
+
 ## 📂 Project Modules
 
 ### User Module
