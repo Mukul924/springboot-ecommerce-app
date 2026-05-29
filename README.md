@@ -50,6 +50,40 @@ A full-stack Ecommerce Web Application built using Spring Boot, Spring Security,
 | Git & GitHub | ✅ |
 
 
+## 🚀 Run Locally
+
+### Clone Repository
+
+```bash
+git clone https://github.com/Mukul924/springboot-ecommerce-app.git
+```
+
+### Create Database
+
+```sql
+CREATE DATABASE ecom_db;
+```
+
+### Update application.properties
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/ecom_db
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+```
+
+### Run Application
+
+```bash
+mvn spring-boot:run
+```
+
+Open:
+
+```text
+http://localhost:9090
+```
+
 
 ## 🏗 Architecture
 
