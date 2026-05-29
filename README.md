@@ -61,13 +61,13 @@ git clone https://github.com/Mukul924/springboot-ecommerce-app.git
 ### Create Database
 
 ```sql
-CREATE DATABASE ecom_db;
+CREATE DATABASE your_db_name;
 ```
 
 ### Update application.properties
 
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/ecom_db
+spring.datasource.url=jdbc:mysql://localhost:3306/your_db_name
 spring.datasource.username=your_username
 spring.datasource.password=your_password
 ```
