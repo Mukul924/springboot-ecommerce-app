@@ -1,3 +1,10 @@
+![Java](https://img.shields.io/badge/Java-17-orange)
+![Spring Boot](https://img.shields.io/badge/SpringBoot-3.x-green)
+![MySQL](https://img.shields.io/badge/MySQL-8-blue)
+![Spring Security](https://img.shields.io/badge/Security-SpringSecurity-success)
+![Thymeleaf](https://img.shields.io/badge/Frontend-Thymeleaf-purple)
+![Maven](https://img.shields.io/badge/Build-Maven-red)
+
 # 🛒 Spring Boot Ecommerce Application
 
 A full-stack Ecommerce Web Application built using Spring Boot, Spring Security, Thymeleaf, Hibernate, and MySQL.
