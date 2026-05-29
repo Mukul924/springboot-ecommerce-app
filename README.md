@@ -35,6 +35,7 @@ A full-stack Ecommerce Web Application built using Spring Boot, Spring Security,
 
 ---
 
+
 ## 🛠 Tech Stack
 
 | Technology | Used |
@@ -100,7 +101,6 @@ MySQL Database
 ```
 
 
-
 ## 📂 Project Structure
 
 ```text
@@ -119,7 +119,6 @@ src/main/java
 ├── security
 └── config
 ```
-
 
 
 ## 📂 Project Modules
